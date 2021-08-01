@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/timeslot",
+      "handler": "timeslot.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/timeslot",
+      "handler": "timeslot.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/timeslot",
+      "handler": "timeslot.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

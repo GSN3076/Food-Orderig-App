@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shipping_addresses",
+  "info": {
+    "name": "ShippingAddress",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Country": {
+      "type": "string"
+    },
+    "State": {
+      "type": "string"
+    },
+    "Address": {
+      "type": "string"
+    },
+    "ZipCode": {
+      "type": "string"
+    },
+    "Contact": {
+      "type": "string"
+    },
+    "Email": {
+      "type": "email"
+    },
+    "City": {
+      "type": "string"
+    },
+    "FullName": {
+      "type": "string"
+    },
+    "orders": {
+      "via": "shipping_address",
+      "collection": "order"
+    },
+    "subscriptions": {
+      "via": "shipping_address",
+      "collection": "subscriptions"
+    },
+    "user": {
+      "via": "shipping_addresses",
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

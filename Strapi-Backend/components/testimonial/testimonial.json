@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_testimonial_testimonials",
+  "info": {
+    "name": "testimonial",
+    "icon": "american-sign-language-interpreting"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "rate": {
+      "type": "integer"
+    },
+    "review": {
+      "type": "text"
+    },
+    "city": {
+      "type": "string"
+    }
+  }
+}

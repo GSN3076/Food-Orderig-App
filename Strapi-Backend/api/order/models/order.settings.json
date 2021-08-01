@@ -1,0 +1,103 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "name": "order",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "paid",
+        "unpaid"
+      ]
+    },
+    "total": {
+      "type": "decimal"
+    },
+    "products": {
+      "collection": "product"
+    },
+    "contact": {
+      "type": "string"
+    },
+    "apartment": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "firstname": {
+      "type": "string"
+    },
+    "lastname": {
+      "type": "string"
+    },
+    "note": {
+      "type": "string"
+    },
+    "payment": {
+      "type": "boolean"
+    },
+    "paypal": {
+      "type": "boolean"
+    },
+    "state": {
+      "type": "string"
+    },
+    "streetAddress": {
+      "type": "string"
+    },
+    "subscribeNews": {
+      "type": "boolean"
+    },
+    "town": {
+      "type": "string"
+    },
+    "zip": {
+      "type": "string"
+    },
+    "saveInfo": {
+      "type": "boolean"
+    },
+    "userID": {
+      "type": "integer"
+    },
+    "quantity": {
+      "type": "integer"
+    },
+    "cartItems": {
+      "type": "json"
+    },
+    "shipping_address": {
+      "model": "shipping-address",
+      "via": "orders"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "orders"
+    },
+    "order_status": {
+      "type": "enumeration",
+      "enum": [
+        "Order_Placed",
+        "In_Processing",
+        "On_Hold",
+        "Delivered",
+        "Canceled"
+      ]
+    },
+    "mealsTime": {
+      "type": "component",
+      "repeatable": false,
+      "component": "meal-time.meal-time"
+    }
+  }
+}

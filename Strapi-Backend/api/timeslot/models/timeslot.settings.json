@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "timeslots",
+  "info": {
+    "name": "timeslot",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "open": {
+      "type": "time"
+    },
+    "close": {
+      "type": "time"
+    },
+    "title": {
+      "type": "string"
+    },
+    "TimeSlot": {
+      "type": "component",
+      "repeatable": true,
+      "component": "meal-time.meal-time"
+    }
+  }
+}

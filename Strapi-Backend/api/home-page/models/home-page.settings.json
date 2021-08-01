@@ -1,0 +1,35 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_pages",
+  "info": {
+    "name": "HomePage",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Header": {
+      "type": "component",
+      "repeatable": false,
+      "component": "page.header"
+    },
+    "Banner": {
+      "type": "component",
+      "repeatable": true,
+      "component": "bannner.banner"
+    },
+    "Intro": {
+      "type": "component",
+      "repeatable": false,
+      "component": "introduction.introduction"
+    },
+    "Testimonials": {
+      "type": "component",
+      "repeatable": true,
+      "component": "testimonial.testimonial"
+    }
+  }
+}

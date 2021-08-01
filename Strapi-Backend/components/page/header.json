@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_page_headers",
+  "info": {
+    "name": "Header",
+    "icon": "align-center",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "menu": {
+      "type": "component",
+      "repeatable": true,
+      "component": "menu.menu"
+    }
+  }
+}

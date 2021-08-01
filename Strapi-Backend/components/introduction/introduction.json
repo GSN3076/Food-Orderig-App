@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_introduction_introductions",
+  "info": {
+    "name": "Introduction",
+    "icon": "anchor",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "component",
+      "repeatable": false,
+      "component": "title.title"
+    },
+    "subtitle": {
+      "type": "component",
+      "repeatable": false,
+      "component": "title.title"
+    },
+    "description": {
+      "type": "text"
+    },
+    "btn": {
+      "type": "component",
+      "repeatable": false,
+      "component": "button.button"
+    },
+    "media": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_button_buttons",
+  "info": {
+    "name": "button",
+    "icon": "ad"
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "string"
+    },
+    "color": {
+      "type": "string"
+    }
+  }
+}

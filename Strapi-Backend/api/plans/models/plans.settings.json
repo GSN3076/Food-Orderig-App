@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "plans",
+  "info": {
+    "name": "Plans",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "subscriptionType": {
+      "type": "enumeration",
+      "enum": [
+        "month",
+        "days"
+      ]
+    },
+    "duration": {
+      "type": "integer"
+    },
+    "mealsPerDay": {
+      "type": "integer"
+    },
+    "products": {
+      "collection": "product"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "description": {
+      "type": "text"
+    },
+    "discount": {
+      "type": "integer"
+    },
+    "subscriptions": {
+      "via": "plan",
+      "collection": "subscriptions"
+    }
+  }
+}

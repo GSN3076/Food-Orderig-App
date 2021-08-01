@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reviews",
+  "info": {
+    "name": "review",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "review": {
+      "type": "string"
+    },
+    "publishDate": {
+      "type": "date"
+    },
+    "rate": {
+      "type": "integer"
+    },
+    "product": {
+      "via": "reviews",
+      "model": "product"
+    },
+    "service": {
+      "via": "reviews",
+      "model": "service"
+    },
+    "user": {
+      "via": "reviews",
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

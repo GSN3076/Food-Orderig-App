@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subscriptions",
+  "info": {
+    "name": "subscriptions",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "plan": {
+      "model": "plans",
+      "via": "subscriptions"
+    },
+    "mealsPerDay": {
+      "type": "integer"
+    },
+    "products": {
+      "collection": "product"
+    },
+    "status": {
+      "type": "string"
+    },
+    "shipping_address": {
+      "model": "shipping-address",
+      "via": "subscriptions"
+    },
+    "totalAmount": {
+      "type": "integer"
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "subscriptions"
+    },
+    "order_status": {
+      "type": "enumeration",
+      "enum": [
+        "Order_Placed",
+        "In_Processing",
+        "On_Hold",
+        "Delivered",
+        "Canceled"
+      ]
+    },
+    "meals": {
+      "type": "component",
+      "repeatable": true,
+      "component": "meals.meals"
+    }
+  }
+}

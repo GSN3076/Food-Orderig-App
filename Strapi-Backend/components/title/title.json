@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_title_titles",
+  "info": {
+    "name": "Title",
+    "icon": "arrow-alt-circle-right"
+  },
+  "options": {},
+  "attributes": {
+    "main": {
+      "type": "string"
+    },
+    "span": {
+      "type": "string"
+    }
+  }
+}

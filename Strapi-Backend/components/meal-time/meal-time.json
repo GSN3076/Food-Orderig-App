@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_meal_time_meal_times",
+  "info": {
+    "name": "mealTime",
+    "icon": "angle-double-down"
+  },
+  "options": {},
+  "attributes": {
+    "start": {
+      "type": "time"
+    },
+    "end": {
+      "type": "time"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

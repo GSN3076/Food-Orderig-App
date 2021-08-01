@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_meals_meals",
+  "info": {
+    "name": "meals",
+    "icon": "apple-alt",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "meal": {
+      "model": "product"
+    },
+    "quantity": {
+      "type": "integer"
+    },
+    "mealTime": {
+      "type": "enumeration",
+      "enum": [
+        "Lunch",
+        "Dinner"
+      ]
+    },
+    "time": {
+      "type": "component",
+      "repeatable": false,
+      "component": "meal-time.meal-time"
+    }
+  }
+}
